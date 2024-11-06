@@ -2,10 +2,8 @@ document.getElementById("magicButton").addEventListener("click", function() {
     document.getElementById("secret").classList.toggle('secret');
 });
 
-const seconds = 325
-
-function secondToMin(sec) {
-    return `\"${Math.floor(sec/60)}:${sec%60}\"`;
+function factorial(n) {
+    return n == 1 || n == 0 ? 1 : n * factorial(n-1);
 };
 
-console.log(secondToMin(seconds));
+console.log(factorial(4));
