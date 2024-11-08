@@ -2,8 +2,10 @@ document.getElementById("magicButton").addEventListener("click", function() {
     document.getElementById("secret").classList.toggle('secret');
 });
 
-function factorial(n) {
-    return n == 1 || n == 0 ? 1 : n * factorial(n-1);
+const treatList = [ "Twix", "Bounty", "Snikers", "Mars", "M&M's", "Twix", "Snikers" ];
+
+function weightLoss(list) {
+    return new Set(list);
 };
 
-console.log(factorial(4));
+console.log(weightLoss(treatList));
