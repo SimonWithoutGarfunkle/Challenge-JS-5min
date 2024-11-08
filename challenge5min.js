@@ -2,10 +2,10 @@ document.getElementById("magicButton").addEventListener("click", function() {
     document.getElementById("secret").classList.toggle('secret');
 });
 
-const salaryList = [27000, 32000, 36000]
+const number = [190, 5, 4200, 2, 776 ]
 
-function getMedianSalary(list) {
-    return list.length % 2 === 0 ? Math.floor(list.slice(1, -1).reduce((acc, salary) => acc += salary)/(list.length - 2)) : list.at(list.length / 2);
+function sumTwoSmallest(list) {
+    return list.sort((a, b) => a - b).splice(0, 2).reduce((a, b) => a + b);
 };
 
-console.log(getMedianSalary(salaryList));
+console.log(sumTwoSmallest(number));
