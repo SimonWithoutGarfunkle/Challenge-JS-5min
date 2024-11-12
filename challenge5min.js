@@ -2,10 +2,9 @@ document.getElementById("magicButton").addEventListener("click", function() {
     document.getElementById("secret").classList.toggle('secret');
 });
 
-const number = [190, 5, 4200, 2, 776 ]
+const itemList = ["Telescopes", "Lunettes", "Yeux", "Monocles"]
 
-function sumTwoSmallest(list) {
-    return list.sort((a, b) => a - b).splice(0, 2).reduce((a, b) => a + b);
-};
-
-console.log(sumTwoSmallest(number));
+function sortStringAscending(itemList) {
+    itemList.sort((a, b) => a.length - b.length);
+}
+console.log(itemList);
