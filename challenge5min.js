@@ -2,9 +2,10 @@ document.getElementById("magicButton").addEventListener("click", function() {
     document.getElementById("secret").classList.toggle('secret');
 });
 
-const itemList = ["Telescopes", "Lunettes", "Yeux", "Monocles"]
+//const items = [1 + 1/4 + 1/7 + 1/10 + 1/13 + 1/16];
+const items = [1, 1/2, 1/2]
 
-function sortStringAscending(itemList) {
-    itemList.sort((a, b) => a.length - b.length);
+function displayPettyCash(items) {
+   return items.reduce((acc, item) => acc += item).toFixed(2);
 }
-console.log(itemList);
+console.log(displayPettyCash(items));
