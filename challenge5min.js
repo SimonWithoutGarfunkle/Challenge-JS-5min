@@ -2,10 +2,10 @@ document.getElementById("magicButton").addEventListener("click", function() {
     document.getElementById("secret").classList.toggle('secret');
 });
 
-//const items = [1 + 1/4 + 1/7 + 1/10 + 1/13 + 1/16];
-const items = [1, 1/2, 1/2]
+const priceList = [1, 4, 5, 19, 21, 2]
 
-function displayPettyCash(items) {
-   return items.reduce((acc, item) => acc += item).toFixed(2);
+function minMax(list) {
+    return [Math.min(...priceList), Math.max(...priceList)]
 }
-console.log(displayPettyCash(items));
+
+console.log(minMax(priceList));
